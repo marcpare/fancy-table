@@ -25,7 +25,7 @@ index3.html
 
 Playing around creating view classes from the DOM. Works ok! But annoying to manipulating the columns of tables. This leads me to Slickgrid:
 
-index4.html
+SlickGrid/play/index4.html
 ---
 
 Try it with SlickGrid. Wow there is good stuff. Column reordering, column finding. This is it!
