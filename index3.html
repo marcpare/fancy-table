@@ -1,0 +1,114 @@
+<html>
+<head>
+  <style>
+  body { width: 400px; margin: 0 auto; padding: 100px 0;}
+  table { font-size: 30px;}
+  table { border: 1px solid #ccc;}
+  td { border: 1px solid #ccc;}
+  a[role=hide] { color: #ccc; cursor: pointer;}
+  </style>
+</head>
+<body>
+  <table id="parts" class="draggable">
+  <tr>
+    <th>Kit <a role="hide">x</a></th>
+    <th>OD</th>
+    <th>Face Width</th>
+  </tr>
+  <tr>
+    <td>123</td>
+    <td>2"</td>
+    <td>23"</td>
+  </tr>
+  <tr>
+    <td>235</td>
+    <td>5"</td>
+    <td>1"</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>10"</td>
+    <td>2"</td>
+  </tr>
+  </table>
+  
+  <hr />
+  
+  <table id="parts2" class="draggable">
+  <tr>
+    <th>Kit</th>
+    <th>OD</th>
+    <th>Face Width</th>
+  </tr>
+  <tr>
+    <td>123</td>
+    <td>2"</td>
+    <td>23"</td>
+  </tr>
+  <tr>
+    <td>235</td>
+    <td>5"</td>
+    <td>1"</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>10"</td>
+    <td>2"</td>
+  </tr>
+  </table>
+  
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script>
+  
+  /*
+    So, with client-side template, we could just change the model
+    to do the delete action. Without it, we have to look up and
+    modify the DOM. 
+  
+    How tricky is the lookup and modification?
+  
+    - can't do it with data-column because the ordering can change.
+  */
+  
+  var HeaderView = function ($el, $table) {
+    this.$table = $table;
+    this.$el = $el;
+    this.$a = this.$el.find('a[role=hide]');
+    this.$a.click(this.removeColumn.bind(this));
+  };
+  HeaderView.prototype.removeColumn = function () {
+    // figure out where the column is (could have been dragged)
+    var i = this.$table.find('th').index(this.$el);
+    
+  };
+  
+  var tableView = {
+    init: function ($el) {
+      this.$el = $el;
+      this.headers = this.$el.find('th').map(function (i, x) {
+        return new HeaderView($(x), $el);
+      });
+    }
+  };
+  
+  tableView.init($('#parts'));
+  
+  // remove column
+  
+  // bind event to role=hide
+    
+  // add column somewhere
+  
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

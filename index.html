@@ -1,0 +1,41 @@
+<html>
+<head>
+  <style>
+  table { border: 1px solid #ccc;}
+  td { border: 1px solid #ccc;}
+  </style>
+  
+  <link rel="stylesheet" href="dragtable/dragtable.css" />
+</head>
+<body>
+  <table id="parts">
+  <tr>
+    <th>Kit</th>
+    <th>OD</th>
+    <th>Face Width</th>
+  </tr>
+  <tr>
+    <td>123</td>
+    <td>2"</td>
+    <td>23"</td>
+  </tr>
+  <tr>
+    <td>235</td>
+    <td>5"</td>
+    <td>1"</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>10"</td>
+    <td>2"</td>
+  </tr>
+  </table>
+  
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+  <script src="dragtable/jquery.dragtable.js"></script>
+  <script>
+  $('#parts').dragtable();
+  </script>
+</body>
+</html>
