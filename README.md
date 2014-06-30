@@ -11,7 +11,7 @@ index.html
 
 dragtable jquery/jquery.ui plugin
 
-doesn't render properyl
+doesn't render properly
 
 index2.html
 ---
@@ -32,3 +32,11 @@ Try it with SlickGrid. Wow there is good stuff. Column reordering, column findin
 
 Buttons in the header
 http://mleibman.github.io/SlickGrid/examples/example-plugin-headerbuttons.html
+
+
+SlickGrid/examples/example-plugin-headerbuttons
+---
+
+Move rows around, 
+subscribe to events.
+So easy!
